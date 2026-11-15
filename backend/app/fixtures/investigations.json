@@ -1,0 +1,522 @@
+{
+  "MN-0000": {
+    "id": "MN-0000",
+    "status": "resource-unavailable",
+    "observations": {
+      "bp": null
+    },
+    "missing_data": [
+      "Blood pressure"
+    ],
+    "resource_constraints": {
+      "bp_monitor_available": false
+    },
+    "safety_flags": [
+      "No automated clinical assessment",
+      "Earth link offline; nothing transmitted"
+    ],
+    "next_check": {
+      "title": "Review the missing observation",
+      "equipment": [
+        "Crew check-in tablet"
+      ]
+    },
+    "requires_medical_officer_review": true,
+    "explanation": {
+      "selected": "This authored scenario keeps the missing BP record visible for officer review. Demo workflow, not clinically validated.",
+      "excluded": "BP recording check excluded because the monitor is unavailable."
+    },
+    "evidence_sources": [
+      {
+        "id": "MEDNAV-UI-FIXTURES",
+        "kind": "scripted-demo",
+        "version": "1.0"
+      }
+    ],
+    "diagnosis": null
+  },
+  "MN-0010": {
+    "id": "MN-0010",
+    "status": "resource-unavailable",
+    "observations": {
+      "bp": null
+    },
+    "missing_data": [
+      "Blood pressure"
+    ],
+    "resource_constraints": {
+      "bp_monitor_available": false
+    },
+    "safety_flags": [
+      "No automated clinical assessment",
+      "Earth link online (simulated); nothing transmitted"
+    ],
+    "next_check": {
+      "title": "Review the missing observation",
+      "equipment": [
+        "Crew check-in tablet"
+      ]
+    },
+    "requires_medical_officer_review": true,
+    "explanation": {
+      "selected": "This authored scenario keeps the missing BP record visible for officer review. Demo workflow, not clinically validated.",
+      "excluded": "BP recording check excluded because the monitor is unavailable."
+    },
+    "evidence_sources": [
+      {
+        "id": "MEDNAV-UI-FIXTURES",
+        "kind": "scripted-demo",
+        "version": "1.0"
+      }
+    ],
+    "diagnosis": null
+  },
+  "MN-0100": {
+    "id": "MN-0100",
+    "status": "review",
+    "observations": {
+      "bp": "120 / 80"
+    },
+    "missing_data": [],
+    "resource_constraints": {
+      "bp_monitor_available": false
+    },
+    "safety_flags": [
+      "No automated clinical assessment",
+      "Earth link offline; nothing transmitted"
+    ],
+    "next_check": {
+      "title": "Review the observation record",
+      "equipment": [
+        "Crew check-in tablet"
+      ]
+    },
+    "requires_medical_officer_review": true,
+    "explanation": {
+      "selected": "This authored scenario includes a synthetic BP record for officer review. Demo workflow, not clinically validated.",
+      "excluded": "Missing-record workflow excluded because this scenario contains a record."
+    },
+    "evidence_sources": [
+      {
+        "id": "MEDNAV-UI-FIXTURES",
+        "kind": "scripted-demo",
+        "version": "1.0"
+      }
+    ],
+    "diagnosis": null
+  },
+  "MN-0110": {
+    "id": "MN-0110",
+    "status": "review",
+    "observations": {
+      "bp": "120 / 80"
+    },
+    "missing_data": [],
+    "resource_constraints": {
+      "bp_monitor_available": false
+    },
+    "safety_flags": [
+      "No automated clinical assessment",
+      "Earth link online (simulated); nothing transmitted"
+    ],
+    "next_check": {
+      "title": "Review the observation record",
+      "equipment": [
+        "Crew check-in tablet"
+      ]
+    },
+    "requires_medical_officer_review": true,
+    "explanation": {
+      "selected": "This authored scenario includes a synthetic BP record for officer review. Demo workflow, not clinically validated.",
+      "excluded": "Missing-record workflow excluded because this scenario contains a record."
+    },
+    "evidence_sources": [
+      {
+        "id": "MEDNAV-UI-FIXTURES",
+        "kind": "scripted-demo",
+        "version": "1.0"
+      }
+    ],
+    "diagnosis": null
+  },
+  "MN-1000": {
+    "id": "MN-1000",
+    "status": "review",
+    "observations": {
+      "bp": null
+    },
+    "missing_data": [
+      "Blood pressure"
+    ],
+    "resource_constraints": {
+      "bp_monitor_available": true
+    },
+    "safety_flags": [
+      "No automated clinical assessment",
+      "Earth link offline; nothing transmitted"
+    ],
+    "next_check": {
+      "title": "Preview a measurement check",
+      "equipment": [
+        "Blood-pressure monitor"
+      ]
+    },
+    "requires_medical_officer_review": true,
+    "explanation": {
+      "selected": "This authored scenario pairs a missing BP record with an available monitor. Officer review required. Demo workflow, not clinically validated.",
+      "excluded": "Completed-record review excluded because BP is missing."
+    },
+    "evidence_sources": [
+      {
+        "id": "MEDNAV-UI-FIXTURES",
+        "kind": "scripted-demo",
+        "version": "1.0"
+      }
+    ],
+    "diagnosis": null
+  },
+  "MN-1010": {
+    "id": "MN-1010",
+    "status": "review",
+    "observations": {
+      "bp": null
+    },
+    "missing_data": [
+      "Blood pressure"
+    ],
+    "resource_constraints": {
+      "bp_monitor_available": true
+    },
+    "safety_flags": [
+      "No automated clinical assessment",
+      "Earth link online (simulated); nothing transmitted"
+    ],
+    "next_check": {
+      "title": "Preview a measurement check",
+      "equipment": [
+        "Blood-pressure monitor"
+      ]
+    },
+    "requires_medical_officer_review": true,
+    "explanation": {
+      "selected": "This authored scenario pairs a missing BP record with an available monitor. Officer review required. Demo workflow, not clinically validated.",
+      "excluded": "Completed-record review excluded because BP is missing."
+    },
+    "evidence_sources": [
+      {
+        "id": "MEDNAV-UI-FIXTURES",
+        "kind": "scripted-demo",
+        "version": "1.0"
+      }
+    ],
+    "diagnosis": null
+  },
+  "MN-1100": {
+    "id": "MN-1100",
+    "status": "review",
+    "observations": {
+      "bp": "120 / 80"
+    },
+    "missing_data": [],
+    "resource_constraints": {
+      "bp_monitor_available": true
+    },
+    "safety_flags": [
+      "No automated clinical assessment",
+      "Earth link offline; nothing transmitted"
+    ],
+    "next_check": {
+      "title": "Review the observation record",
+      "equipment": [
+        "Crew check-in tablet"
+      ]
+    },
+    "requires_medical_officer_review": true,
+    "explanation": {
+      "selected": "This authored scenario includes a synthetic BP record for officer review. Demo workflow, not clinically validated.",
+      "excluded": "Missing-record workflow excluded because this scenario contains a record."
+    },
+    "evidence_sources": [
+      {
+        "id": "MEDNAV-UI-FIXTURES",
+        "kind": "scripted-demo",
+        "version": "1.0"
+      }
+    ],
+    "diagnosis": null
+  },
+  "MN-1110": {
+    "id": "MN-1110",
+    "status": "review",
+    "observations": {
+      "bp": "120 / 80"
+    },
+    "missing_data": [],
+    "resource_constraints": {
+      "bp_monitor_available": true
+    },
+    "safety_flags": [
+      "No automated clinical assessment",
+      "Earth link online (simulated); nothing transmitted"
+    ],
+    "next_check": {
+      "title": "Review the observation record",
+      "equipment": [
+        "Crew check-in tablet"
+      ]
+    },
+    "requires_medical_officer_review": true,
+    "explanation": {
+      "selected": "This authored scenario includes a synthetic BP record for officer review. Demo workflow, not clinically validated.",
+      "excluded": "Missing-record workflow excluded because this scenario contains a record."
+    },
+    "evidence_sources": [
+      {
+        "id": "MEDNAV-UI-FIXTURES",
+        "kind": "scripted-demo",
+        "version": "1.0"
+      }
+    ],
+    "diagnosis": null
+  },
+  "MN-0001": {
+    "id": "MN-0001",
+    "status": "escalate",
+    "observations": {
+      "bp": null
+    },
+    "missing_data": [
+      "Blood pressure"
+    ],
+    "resource_constraints": {
+      "bp_monitor_available": false
+    },
+    "safety_flags": [
+      "Manual emergency override",
+      "Earth link offline; nothing transmitted"
+    ],
+    "next_check": null,
+    "requires_medical_officer_review": true,
+    "explanation": {
+      "selected": "Manual override selects the escalation demo. No emergency is detected or inferred. Demo workflow, not clinically validated.",
+      "excluded": "Routine next checks are suppressed. No procedures or treatments are generated."
+    },
+    "evidence_sources": [
+      {
+        "id": "MEDNAV-UI-FIXTURES",
+        "kind": "scripted-demo",
+        "version": "1.0"
+      }
+    ],
+    "diagnosis": null
+  },
+  "MN-0011": {
+    "id": "MN-0011",
+    "status": "escalate",
+    "observations": {
+      "bp": null
+    },
+    "missing_data": [
+      "Blood pressure"
+    ],
+    "resource_constraints": {
+      "bp_monitor_available": false
+    },
+    "safety_flags": [
+      "Manual emergency override",
+      "Earth link online (simulated); nothing transmitted"
+    ],
+    "next_check": null,
+    "requires_medical_officer_review": true,
+    "explanation": {
+      "selected": "Manual override selects the escalation demo. No emergency is detected or inferred. Demo workflow, not clinically validated.",
+      "excluded": "Routine next checks are suppressed. No procedures or treatments are generated."
+    },
+    "evidence_sources": [
+      {
+        "id": "MEDNAV-UI-FIXTURES",
+        "kind": "scripted-demo",
+        "version": "1.0"
+      }
+    ],
+    "diagnosis": null
+  },
+  "MN-0101": {
+    "id": "MN-0101",
+    "status": "escalate",
+    "observations": {
+      "bp": "120 / 80"
+    },
+    "missing_data": [],
+    "resource_constraints": {
+      "bp_monitor_available": false
+    },
+    "safety_flags": [
+      "Manual emergency override",
+      "Earth link offline; nothing transmitted"
+    ],
+    "next_check": null,
+    "requires_medical_officer_review": true,
+    "explanation": {
+      "selected": "Manual override selects the escalation demo. No emergency is detected or inferred. Demo workflow, not clinically validated.",
+      "excluded": "Routine next checks are suppressed. No procedures or treatments are generated."
+    },
+    "evidence_sources": [
+      {
+        "id": "MEDNAV-UI-FIXTURES",
+        "kind": "scripted-demo",
+        "version": "1.0"
+      }
+    ],
+    "diagnosis": null
+  },
+  "MN-0111": {
+    "id": "MN-0111",
+    "status": "escalate",
+    "observations": {
+      "bp": "120 / 80"
+    },
+    "missing_data": [],
+    "resource_constraints": {
+      "bp_monitor_available": false
+    },
+    "safety_flags": [
+      "Manual emergency override",
+      "Earth link online (simulated); nothing transmitted"
+    ],
+    "next_check": null,
+    "requires_medical_officer_review": true,
+    "explanation": {
+      "selected": "Manual override selects the escalation demo. No emergency is detected or inferred. Demo workflow, not clinically validated.",
+      "excluded": "Routine next checks are suppressed. No procedures or treatments are generated."
+    },
+    "evidence_sources": [
+      {
+        "id": "MEDNAV-UI-FIXTURES",
+        "kind": "scripted-demo",
+        "version": "1.0"
+      }
+    ],
+    "diagnosis": null
+  },
+  "MN-1001": {
+    "id": "MN-1001",
+    "status": "escalate",
+    "observations": {
+      "bp": null
+    },
+    "missing_data": [
+      "Blood pressure"
+    ],
+    "resource_constraints": {
+      "bp_monitor_available": true
+    },
+    "safety_flags": [
+      "Manual emergency override",
+      "Earth link offline; nothing transmitted"
+    ],
+    "next_check": null,
+    "requires_medical_officer_review": true,
+    "explanation": {
+      "selected": "Manual override selects the escalation demo. No emergency is detected or inferred. Demo workflow, not clinically validated.",
+      "excluded": "Routine next checks are suppressed. No procedures or treatments are generated."
+    },
+    "evidence_sources": [
+      {
+        "id": "MEDNAV-UI-FIXTURES",
+        "kind": "scripted-demo",
+        "version": "1.0"
+      }
+    ],
+    "diagnosis": null
+  },
+  "MN-1011": {
+    "id": "MN-1011",
+    "status": "escalate",
+    "observations": {
+      "bp": null
+    },
+    "missing_data": [
+      "Blood pressure"
+    ],
+    "resource_constraints": {
+      "bp_monitor_available": true
+    },
+    "safety_flags": [
+      "Manual emergency override",
+      "Earth link online (simulated); nothing transmitted"
+    ],
+    "next_check": null,
+    "requires_medical_officer_review": true,
+    "explanation": {
+      "selected": "Manual override selects the escalation demo. No emergency is detected or inferred. Demo workflow, not clinically validated.",
+      "excluded": "Routine next checks are suppressed. No procedures or treatments are generated."
+    },
+    "evidence_sources": [
+      {
+        "id": "MEDNAV-UI-FIXTURES",
+        "kind": "scripted-demo",
+        "version": "1.0"
+      }
+    ],
+    "diagnosis": null
+  },
+  "MN-1101": {
+    "id": "MN-1101",
+    "status": "escalate",
+    "observations": {
+      "bp": "120 / 80"
+    },
+    "missing_data": [],
+    "resource_constraints": {
+      "bp_monitor_available": true
+    },
+    "safety_flags": [
+      "Manual emergency override",
+      "Earth link offline; nothing transmitted"
+    ],
+    "next_check": null,
+    "requires_medical_officer_review": true,
+    "explanation": {
+      "selected": "Manual override selects the escalation demo. No emergency is detected or inferred. Demo workflow, not clinically validated.",
+      "excluded": "Routine next checks are suppressed. No procedures or treatments are generated."
+    },
+    "evidence_sources": [
+      {
+        "id": "MEDNAV-UI-FIXTURES",
+        "kind": "scripted-demo",
+        "version": "1.0"
+      }
+    ],
+    "diagnosis": null
+  },
+  "MN-1111": {
+    "id": "MN-1111",
+    "status": "escalate",
+    "observations": {
+      "bp": "120 / 80"
+    },
+    "missing_data": [],
+    "resource_constraints": {
+      "bp_monitor_available": true
+    },
+    "safety_flags": [
+      "Manual emergency override",
+      "Earth link online (simulated); nothing transmitted"
+    ],
+    "next_check": null,
+    "requires_medical_officer_review": true,
+    "explanation": {
+      "selected": "Manual override selects the escalation demo. No emergency is detected or inferred. Demo workflow, not clinically validated.",
+      "excluded": "Routine next checks are suppressed. No procedures or treatments are generated."
+    },
+    "evidence_sources": [
+      {
+        "id": "MEDNAV-UI-FIXTURES",
+        "kind": "scripted-demo",
+        "version": "1.0"
+      }
+    ],
+    "diagnosis": null
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "executed_at_utc": "2026-11-14T04:45:32.718208+00:00",
+  "unit": "test methods (subtest failures collapsed to parent)",
+  "total": 32,
+  "passed": 11,
+  "failed_or_error": 1,
+  "skipped": 20,
+  "skip_reasons": [
+    {
+      "test": "test_member4.ApiTests.test_invalid_type_returns_actionable_error",
+      "reason": "MEDNAV_API_URL not configured: local backend absent"
+    },
+    {
+      "test": "test_member4.ApiTests.test_inventory_sanitization",
+      "reason": "MEDNAV_INVENTORY_API_EVALUATOR not configured: real component absent"
+    },
+    {
+      "test": "test_member4.ApiTests.test_valid_scenarios",
+      "reason": "MEDNAV_API_URL not configured: local backend absent"
+    },
+    {
+      "test": "test_member4.EngineTests.test_S01",
+      "reason": "MEDNAV_EVALUATOR not configured: real component absent"
+    },
+    {
+      "test": "test_member4.EngineTests.test_S02",
+      "reason": "MEDNAV_EVALUATOR not configured: real component absent"
+    },
+    {
+      "test": "test_member4.EngineTests.test_S03",
+      "reason": "MEDNAV_EVALUATOR not configured: real component absent"
+    },
+    {
+      "test": "test_member4.EngineTests.test_S04",
+      "reason": "MEDNAV_EVALUATOR not configured: real component absent"
+    },
+    {
+      "test": "test_member4.EngineTests.test_S05",
+      "reason": "MEDNAV_EVALUATOR not configured: real component absent"
+    },
+    {
+      "test": "test_member4.EngineTests.test_S07",
+      "reason": "MEDNAV_EVALUATOR not configured: real component absent"
+    },
+    {
+      "test": "test_member4.EngineTests.test_S08",
+      "reason": "MEDNAV_EVALUATOR not configured: real component absent"
+    },
+    {
+      "test": "test_member4.EngineTests.test_S09",
+      "reason": "MEDNAV_EVALUATOR not configured: real component absent"
+    },
+    {
+      "test": "test_member4.EngineTests.test_S10",
+      "reason": "MEDNAV_EVALUATOR not configured: real component absent"
+    },
+    {
+      "test": "test_member4.EngineTests.test_S11",
+      "reason": "MEDNAV_EVALUATOR not configured: real component absent"
+    },
+    {
+      "test": "test_member4.EngineTests.test_S14",
+      "reason": "MEDNAV_EVALUATOR not configured: real component absent"
+    },
+    {
+      "test": "test_member4.EngineTests.test_S15",
+      "reason": "MEDNAV_EVALUATOR not configured: real component absent"
+    },
+    {
+      "test": "test_member4.EngineTests.test_S16",
+      "reason": "MEDNAV_EVALUATOR not configured: real component absent"
+    },
+    {
+      "test": "test_member4.EngineTests.test_conflicting_records",
+      "reason": "API v1 conflict representation and expected response not agreed; see handoff"
+    },
+    {
+      "test": "test_member4.EngineTests.test_determinism_and_input_immutability",
+      "reason": "MEDNAV_EVALUATOR not configured: real component absent"
+    },
+    {
+      "test": "test_member4.EngineTests.test_empty_catalog",
+      "reason": "MEDNAV_CONTEXT_EVALUATOR not configured: real component absent"
+    },
+    {
+      "test": "test_member4.EngineTests.test_offline_engine_import_and_execution",
+      "reason": "MEDNAV_EVALUATOR not configured: real component absent"
+    }
+  ],
+  "failures": [
+    {
+      "test": "test_member4.SeedTests.test_generator_byte_reproducibility",
+      "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\ZL_sht_H\\AppData\\Local\\Temp\\mednav-member4-xtij37dp\\package\\tests\\member4\\test_member4.py\", line 137, in test_generator_byte_reproducibility\n    self.assertEqual(p.read_bytes(),(ROOT/'data'/p.relative_to(temp)).read_bytes(),str(p))\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: b'{\\r\\n  \"S03\": {\\r\\n    \"inventory\": [\\r\\n  [2055 chars]\\r\\n' != b'{\\n  \"S03\": {\\n    \"inventory\": [\\n      {\\[1893 chars]n}\\n' : C:\\Users\\ZL_sht_H\\AppData\\Local\\Temp\\tmph0o7a447\\scenarios\\context.json\n"
+    }
+  ],
+  "clinical_validation": false,
+  "limitations": "Fixture/harness results are not engine or UI performance. Inspect skips; disconnected full-app operation and baseline comparison require integrated code.",
+  "integration_mode": "baseline",
+  "engine_configured": false,
+  "database_isolation": "TemporaryDirectory; server terminated and database deleted after run"
+}

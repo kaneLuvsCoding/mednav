@@ -1,0 +1,5 @@
+equipment_id,label,quantity,usable,dataset_type
+thermometer,Thermometer,1,true,synthetic
+bp_monitor,Blood-pressure monitor,0,false,synthetic
+pulse_oximeter,Pulse oximeter,1,false,synthetic
+weighing_scale,Weighing scale,1,true,synthetic

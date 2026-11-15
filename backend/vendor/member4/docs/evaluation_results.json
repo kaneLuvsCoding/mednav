@@ -1,0 +1,93 @@
+{
+  "executed_at_utc": "2026-11-14T04:04:49.961621+00:00",
+  "unit": "test methods (subtest failures collapsed to parent)",
+  "total": 32,
+  "passed": 12,
+  "failed_or_error": 0,
+  "skipped": 20,
+  "skip_reasons": [
+    {
+      "test": "test_member4.ApiTests.test_invalid_type_returns_actionable_error",
+      "reason": "MEDNAV_API_URL not configured: local backend absent"
+    },
+    {
+      "test": "test_member4.ApiTests.test_inventory_sanitization",
+      "reason": "MEDNAV_INVENTORY_API_EVALUATOR not configured: real component absent"
+    },
+    {
+      "test": "test_member4.ApiTests.test_valid_scenarios",
+      "reason": "MEDNAV_API_URL not configured: local backend absent"
+    },
+    {
+      "test": "test_member4.EngineTests.test_S01",
+      "reason": "MEDNAV_EVALUATOR not configured: real component absent"
+    },
+    {
+      "test": "test_member4.EngineTests.test_S02",
+      "reason": "MEDNAV_EVALUATOR not configured: real component absent"
+    },
+    {
+      "test": "test_member4.EngineTests.test_S03",
+      "reason": "MEDNAV_EVALUATOR not configured: real component absent"
+    },
+    {
+      "test": "test_member4.EngineTests.test_S04",
+      "reason": "MEDNAV_EVALUATOR not configured: real component absent"
+    },
+    {
+      "test": "test_member4.EngineTests.test_S05",
+      "reason": "MEDNAV_EVALUATOR not configured: real component absent"
+    },
+    {
+      "test": "test_member4.EngineTests.test_S07",
+      "reason": "MEDNAV_EVALUATOR not configured: real component absent"
+    },
+    {
+      "test": "test_member4.EngineTests.test_S08",
+      "reason": "MEDNAV_EVALUATOR not configured: real component absent"
+    },
+    {
+      "test": "test_member4.EngineTests.test_S09",
+      "reason": "MEDNAV_EVALUATOR not configured: real component absent"
+    },
+    {
+      "test": "test_member4.EngineTests.test_S10",
+      "reason": "MEDNAV_EVALUATOR not configured: real component absent"
+    },
+    {
+      "test": "test_member4.EngineTests.test_S11",
+      "reason": "MEDNAV_EVALUATOR not configured: real component absent"
+    },
+    {
+      "test": "test_member4.EngineTests.test_S14",
+      "reason": "MEDNAV_EVALUATOR not configured: real component absent"
+    },
+    {
+      "test": "test_member4.EngineTests.test_S15",
+      "reason": "MEDNAV_EVALUATOR not configured: real component absent"
+    },
+    {
+      "test": "test_member4.EngineTests.test_S16",
+      "reason": "MEDNAV_EVALUATOR not configured: real component absent"
+    },
+    {
+      "test": "test_member4.EngineTests.test_conflicting_records",
+      "reason": "API v1 conflict representation and expected response not agreed; see handoff"
+    },
+    {
+      "test": "test_member4.EngineTests.test_determinism_and_input_immutability",
+      "reason": "MEDNAV_EVALUATOR not configured: real component absent"
+    },
+    {
+      "test": "test_member4.EngineTests.test_empty_catalog",
+      "reason": "MEDNAV_CONTEXT_EVALUATOR not configured: real component absent"
+    },
+    {
+      "test": "test_member4.EngineTests.test_offline_engine_import_and_execution",
+      "reason": "MEDNAV_EVALUATOR not configured: real component absent"
+    }
+  ],
+  "failures": [],
+  "clinical_validation": false,
+  "limitations": "Fixture/harness results are not engine or UI performance. Inspect skips; disconnected full-app operation and baseline comparison require integrated code."
+}

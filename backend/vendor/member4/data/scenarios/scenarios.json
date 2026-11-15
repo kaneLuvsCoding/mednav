@@ -1,0 +1,572 @@
+[
+  {
+    "scenario_id": "S01",
+    "title": "Normal-looking fictional check-in",
+    "investigation_request": {
+      "astronaut_id": "A01",
+      "observed_at": "2026-11-14T09:00:00+06:30",
+      "symptoms": [],
+      "measurements": {
+        "resting_hr_bpm": 70,
+        "sleep_hours": 7.3,
+        "systolic_bp_mm_hg": 118,
+        "diastolic_bp_mm_hg": 76
+      },
+      "personal_baseline": {
+        "resting_hr_bpm": 70,
+        "sleep_hours": 7.3
+      },
+      "available_equipment": [
+        "thermometer",
+        "weighing_scale"
+      ],
+      "communication_status": "offline",
+      "emergency_override": false,
+      "dataset_type": "synthetic"
+    },
+    "expected_status": null,
+    "expected_missing_data": [],
+    "forbidden_equipment": [
+      "bp_monitor",
+      "pulse_oximeter"
+    ],
+    "notes": "No disease inference. Ordinary status vocabulary requires Member 3 agreement."
+  },
+  {
+    "scenario_id": "S02",
+    "title": "Fatigue and lower sleep",
+    "investigation_request": {
+      "astronaut_id": "A02",
+      "observed_at": "2026-11-14T09:00:00+06:30",
+      "symptoms": [
+        "fatigue"
+      ],
+      "measurements": {
+        "resting_hr_bpm": 70,
+        "sleep_hours": 4.2,
+        "systolic_bp_mm_hg": 118,
+        "diastolic_bp_mm_hg": 76
+      },
+      "personal_baseline": {
+        "resting_hr_bpm": 70,
+        "sleep_hours": 7.3
+      },
+      "available_equipment": [
+        "thermometer",
+        "weighing_scale"
+      ],
+      "communication_status": "offline",
+      "emergency_override": false,
+      "dataset_type": "synthetic"
+    },
+    "expected_status": null,
+    "expected_missing_data": [],
+    "forbidden_equipment": [
+      "bp_monitor",
+      "pulse_oximeter"
+    ],
+    "notes": "Describe observed change only; no clinical threshold."
+  },
+  {
+    "scenario_id": "S03",
+    "title": "Missing BP with usable monitor",
+    "investigation_request": {
+      "astronaut_id": "A01",
+      "observed_at": "2026-11-14T09:00:00+06:30",
+      "symptoms": [
+        "headache",
+        "dizziness"
+      ],
+      "measurements": {
+        "resting_hr_bpm": 70,
+        "sleep_hours": 7.3,
+        "systolic_bp_mm_hg": null,
+        "diastolic_bp_mm_hg": null
+      },
+      "personal_baseline": {
+        "resting_hr_bpm": 70,
+        "sleep_hours": 7.3
+      },
+      "available_equipment": [
+        "bp_monitor",
+        "thermometer"
+      ],
+      "communication_status": "offline",
+      "emergency_override": false,
+      "dataset_type": "synthetic"
+    },
+    "expected_status": null,
+    "expected_missing_data": [
+      "systolic_bp_mm_hg",
+      "diastolic_bp_mm_hg"
+    ],
+    "forbidden_equipment": [
+      "pulse_oximeter",
+      "weighing_scale"
+    ],
+    "notes": "Monitor availability is a scenario override, not default inventory."
+  },
+  {
+    "scenario_id": "S04",
+    "title": "Missing BP with monitor out of stock",
+    "investigation_request": {
+      "astronaut_id": "A01",
+      "observed_at": "2026-11-14T09:00:00+06:30",
+      "symptoms": [
+        "headache",
+        "dizziness"
+      ],
+      "measurements": {
+        "resting_hr_bpm": 88,
+        "sleep_hours": 4.2,
+        "systolic_bp_mm_hg": null,
+        "diastolic_bp_mm_hg": null
+      },
+      "personal_baseline": {
+        "resting_hr_bpm": 70,
+        "sleep_hours": 7.3
+      },
+      "available_equipment": [
+        "thermometer"
+      ],
+      "communication_status": "offline",
+      "emergency_override": false,
+      "dataset_type": "synthetic"
+    },
+    "expected_status": "needs_review",
+    "expected_missing_data": [
+      "systolic_bp_mm_hg",
+      "diastolic_bp_mm_hg"
+    ],
+    "forbidden_equipment": [
+      "bp_monitor",
+      "pulse_oximeter",
+      "weighing_scale"
+    ],
+    "notes": "Matches the API v1 illustrative request. Exact checklist ranking is not pinned."
+  },
+  {
+    "scenario_id": "S05",
+    "title": "One day sensor outage",
+    "investigation_request": {
+      "astronaut_id": "A03",
+      "observed_at": "2026-11-14T09:00:00+06:30",
+      "symptoms": [],
+      "measurements": {
+        "resting_hr_bpm": null,
+        "sleep_hours": null,
+        "systolic_bp_mm_hg": 118,
+        "diastolic_bp_mm_hg": 76
+      },
+      "personal_baseline": {
+        "resting_hr_bpm": 70,
+        "sleep_hours": 7.3
+      },
+      "available_equipment": [
+        "thermometer",
+        "weighing_scale"
+      ],
+      "communication_status": "offline",
+      "emergency_override": false,
+      "dataset_type": "synthetic"
+    },
+    "expected_status": null,
+    "expected_missing_data": [
+      "resting_hr_bpm",
+      "sleep_hours"
+    ],
+    "forbidden_equipment": [
+      "bp_monitor",
+      "pulse_oximeter"
+    ],
+    "notes": "CSV outage is A03 on 2026-10-30. This request independently exercises missing values."
+  },
+  {
+    "scenario_id": "S06",
+    "title": "Conflicting source records",
+    "investigation_request": {
+      "astronaut_id": "A01",
+      "observed_at": "2026-11-14T09:00:00+06:30",
+      "symptoms": [],
+      "measurements": {
+        "resting_hr_bpm": 70,
+        "sleep_hours": 7.3,
+        "systolic_bp_mm_hg": 118,
+        "diastolic_bp_mm_hg": 76
+      },
+      "personal_baseline": {
+        "resting_hr_bpm": 70,
+        "sleep_hours": 7.3
+      },
+      "available_equipment": [
+        "thermometer",
+        "weighing_scale"
+      ],
+      "communication_status": "offline",
+      "emergency_override": false,
+      "dataset_type": "synthetic"
+    },
+    "expected_status": null,
+    "expected_missing_data": [],
+    "forbidden_equipment": [
+      "bp_monitor",
+      "pulse_oximeter"
+    ],
+    "notes": "BLOCKED: API v1 has no multiple-record/conflict field. Separate context fixture requires integration agreement."
+  },
+  {
+    "scenario_id": "S07",
+    "title": "Reviewed checklist available",
+    "investigation_request": {
+      "astronaut_id": "A01",
+      "observed_at": "2026-11-14T09:00:00+06:30",
+      "symptoms": [
+        "headache"
+      ],
+      "measurements": {
+        "resting_hr_bpm": 70,
+        "sleep_hours": 7.3,
+        "systolic_bp_mm_hg": 118,
+        "diastolic_bp_mm_hg": 76
+      },
+      "personal_baseline": {
+        "resting_hr_bpm": 70,
+        "sleep_hours": 7.3
+      },
+      "available_equipment": [
+        "thermometer",
+        "weighing_scale"
+      ],
+      "communication_status": "offline",
+      "emergency_override": false,
+      "dataset_type": "synthetic"
+    },
+    "expected_status": null,
+    "expected_missing_data": [],
+    "forbidden_equipment": [
+      "bp_monitor",
+      "pulse_oximeter"
+    ],
+    "notes": "Do not require a particular rank; Member 3 must provide a reviewed/prototype catalog."
+  },
+  {
+    "scenario_id": "S08",
+    "title": "Listed but unusable BP monitor",
+    "investigation_request": {
+      "astronaut_id": "A01",
+      "observed_at": "2026-11-14T09:00:00+06:30",
+      "symptoms": [
+        "headache"
+      ],
+      "measurements": {
+        "resting_hr_bpm": 70,
+        "sleep_hours": 7.3,
+        "systolic_bp_mm_hg": null,
+        "diastolic_bp_mm_hg": null
+      },
+      "personal_baseline": {
+        "resting_hr_bpm": 70,
+        "sleep_hours": 7.3
+      },
+      "available_equipment": [
+        "thermometer",
+        "weighing_scale"
+      ],
+      "communication_status": "offline",
+      "emergency_override": false,
+      "dataset_type": "synthetic"
+    },
+    "expected_status": null,
+    "expected_missing_data": [
+      "systolic_bp_mm_hg",
+      "diastolic_bp_mm_hg"
+    ],
+    "forbidden_equipment": [
+      "bp_monitor",
+      "pulse_oximeter"
+    ],
+    "notes": "Inventory override has BP quantity 1 but usable=false. Requires backend inventory-context test too."
+  },
+  {
+    "scenario_id": "S09",
+    "title": "Earth communication offline",
+    "investigation_request": {
+      "astronaut_id": "A01",
+      "observed_at": "2026-11-14T09:00:00+06:30",
+      "symptoms": [
+        "headache"
+      ],
+      "measurements": {
+        "resting_hr_bpm": 70,
+        "sleep_hours": 7.3,
+        "systolic_bp_mm_hg": null,
+        "diastolic_bp_mm_hg": null
+      },
+      "personal_baseline": {
+        "resting_hr_bpm": 70,
+        "sleep_hours": 7.3
+      },
+      "available_equipment": [
+        "thermometer",
+        "weighing_scale"
+      ],
+      "communication_status": "offline",
+      "emergency_override": false,
+      "dataset_type": "synthetic"
+    },
+    "expected_status": null,
+    "expected_missing_data": [
+      "systolic_bp_mm_hg",
+      "diastolic_bp_mm_hg"
+    ],
+    "forbidden_equipment": [
+      "bp_monitor",
+      "pulse_oximeter"
+    ],
+    "notes": "Offline flag alone does not prove offline operation; run socket-blocked engine test and disconnected UI procedure."
+  },
+  {
+    "scenario_id": "S10",
+    "title": "Manual emergency override",
+    "investigation_request": {
+      "astronaut_id": "A01",
+      "observed_at": "2026-11-14T09:00:00+06:30",
+      "symptoms": [],
+      "measurements": {
+        "resting_hr_bpm": 70,
+        "sleep_hours": 7.3,
+        "systolic_bp_mm_hg": 118,
+        "diastolic_bp_mm_hg": 76
+      },
+      "personal_baseline": {
+        "resting_hr_bpm": 70,
+        "sleep_hours": 7.3
+      },
+      "available_equipment": [
+        "thermometer",
+        "weighing_scale"
+      ],
+      "communication_status": "offline",
+      "emergency_override": true,
+      "dataset_type": "synthetic"
+    },
+    "expected_status": "escalate",
+    "expected_missing_data": [],
+    "forbidden_equipment": [
+      "bp_monitor",
+      "pulse_oximeter"
+    ],
+    "notes": ""
+  },
+  {
+    "scenario_id": "S11",
+    "title": "Deterministic replay",
+    "investigation_request": {
+      "astronaut_id": "A01",
+      "observed_at": "2026-11-14T09:00:00+06:30",
+      "symptoms": [
+        "headache"
+      ],
+      "measurements": {
+        "resting_hr_bpm": 70,
+        "sleep_hours": 7.3,
+        "systolic_bp_mm_hg": null,
+        "diastolic_bp_mm_hg": null
+      },
+      "personal_baseline": {
+        "resting_hr_bpm": 70,
+        "sleep_hours": 7.3
+      },
+      "available_equipment": [
+        "thermometer",
+        "weighing_scale"
+      ],
+      "communication_status": "offline",
+      "emergency_override": false,
+      "dataset_type": "synthetic"
+    },
+    "expected_status": null,
+    "expected_missing_data": [
+      "systolic_bp_mm_hg",
+      "diastolic_bp_mm_hg"
+    ],
+    "forbidden_equipment": [
+      "bp_monitor",
+      "pulse_oximeter"
+    ],
+    "notes": "Repeat identical request at fixed rule version; compare entire engine output."
+  },
+  {
+    "scenario_id": "S12",
+    "title": "Empty eligible checklist catalog",
+    "investigation_request": {
+      "astronaut_id": "A01",
+      "observed_at": "2026-11-14T09:00:00+06:30",
+      "symptoms": [],
+      "measurements": {
+        "resting_hr_bpm": 70,
+        "sleep_hours": 7.3,
+        "systolic_bp_mm_hg": 118,
+        "diastolic_bp_mm_hg": 76
+      },
+      "personal_baseline": {
+        "resting_hr_bpm": 70,
+        "sleep_hours": 7.3
+      },
+      "available_equipment": [],
+      "communication_status": "offline",
+      "emergency_override": false,
+      "dataset_type": "synthetic"
+    },
+    "expected_status": "insufficient_evidence",
+    "expected_missing_data": [],
+    "forbidden_equipment": [
+      "thermometer",
+      "bp_monitor",
+      "pulse_oximeter",
+      "weighing_scale"
+    ],
+    "notes": "Requires empty candidate catalog via test adapter. Empty equipment alone is insufficient: equipment-free checks may still exist."
+  },
+  {
+    "scenario_id": "S13",
+    "title": "Invalid measurement type",
+    "investigation_request": {
+      "astronaut_id": "A01",
+      "observed_at": "2026-11-14T09:00:00+06:30",
+      "symptoms": [],
+      "measurements": {
+        "resting_hr_bpm": "not-a-number",
+        "sleep_hours": 7.3,
+        "systolic_bp_mm_hg": 118,
+        "diastolic_bp_mm_hg": 76
+      },
+      "personal_baseline": {
+        "resting_hr_bpm": 70,
+        "sleep_hours": 7.3
+      },
+      "available_equipment": [
+        "thermometer",
+        "weighing_scale"
+      ],
+      "communication_status": "offline",
+      "emergency_override": false,
+      "dataset_type": "synthetic"
+    },
+    "expected_status": null,
+    "expected_missing_data": [],
+    "forbidden_equipment": [
+      "bp_monitor",
+      "pulse_oximeter"
+    ],
+    "notes": "Intentionally invalid negative fixture; API must reject with validation_error envelope. Not an engine input."
+  },
+  {
+    "scenario_id": "S14",
+    "title": "Synthetic provenance preserved",
+    "investigation_request": {
+      "astronaut_id": "A04",
+      "observed_at": "2026-11-14T09:00:00+06:30",
+      "symptoms": [],
+      "measurements": {
+        "resting_hr_bpm": 70,
+        "sleep_hours": 7.3,
+        "systolic_bp_mm_hg": 118,
+        "diastolic_bp_mm_hg": 76
+      },
+      "personal_baseline": {
+        "resting_hr_bpm": 70,
+        "sleep_hours": 7.3
+      },
+      "available_equipment": [
+        "thermometer",
+        "weighing_scale"
+      ],
+      "communication_status": "offline",
+      "emergency_override": false,
+      "dataset_type": "synthetic"
+    },
+    "expected_status": null,
+    "expected_missing_data": [],
+    "forbidden_equipment": [
+      "bp_monitor",
+      "pulse_oximeter"
+    ],
+    "notes": ""
+  },
+  {
+    "scenario_id": "S15",
+    "title": "All four measurements unknown",
+    "investigation_request": {
+      "astronaut_id": "A01",
+      "observed_at": "2026-11-14T09:00:00+06:30",
+      "symptoms": [],
+      "measurements": {
+        "resting_hr_bpm": null,
+        "sleep_hours": null,
+        "systolic_bp_mm_hg": null,
+        "diastolic_bp_mm_hg": null
+      },
+      "personal_baseline": {
+        "resting_hr_bpm": 70,
+        "sleep_hours": 7.3
+      },
+      "available_equipment": [
+        "thermometer",
+        "weighing_scale"
+      ],
+      "communication_status": "offline",
+      "emergency_override": false,
+      "dataset_type": "synthetic"
+    },
+    "expected_status": null,
+    "expected_missing_data": [
+      "resting_hr_bpm",
+      "sleep_hours",
+      "systolic_bp_mm_hg",
+      "diastolic_bp_mm_hg"
+    ],
+    "forbidden_equipment": [
+      "bp_monitor",
+      "pulse_oximeter"
+    ],
+    "notes": ""
+  },
+  {
+    "scenario_id": "S16",
+    "title": "Emergency override with all data missing",
+    "investigation_request": {
+      "astronaut_id": "A01",
+      "observed_at": "2026-11-14T09:00:00+06:30",
+      "symptoms": [],
+      "measurements": {
+        "resting_hr_bpm": null,
+        "sleep_hours": null,
+        "systolic_bp_mm_hg": null,
+        "diastolic_bp_mm_hg": null
+      },
+      "personal_baseline": {
+        "resting_hr_bpm": 70,
+        "sleep_hours": 7.3
+      },
+      "available_equipment": [],
+      "communication_status": "offline",
+      "emergency_override": true,
+      "dataset_type": "synthetic"
+    },
+    "expected_status": "escalate",
+    "expected_missing_data": [
+      "resting_hr_bpm",
+      "sleep_hours",
+      "systolic_bp_mm_hg",
+      "diastolic_bp_mm_hg"
+    ],
+    "forbidden_equipment": [
+      "thermometer",
+      "bp_monitor",
+      "pulse_oximeter",
+      "weighing_scale"
+    ],
+    "notes": ""
+  }
+]

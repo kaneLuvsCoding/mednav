@@ -1,0 +1,11 @@
+{
+  "astronaut_id": "A01",
+  "observed_at": "2026-11-14T09:00:00+06:30",
+  "symptoms": ["headache", "dizziness"],
+  "measurements": {"resting_hr_bpm": 88, "sleep_hours": 4.2, "systolic_bp_mm_hg": null, "diastolic_bp_mm_hg": null},
+  "personal_baseline": {"resting_hr_bpm": 70, "sleep_hours": 7.3},
+  "available_equipment": ["thermometer"],
+  "communication_status": "offline",
+  "emergency_override": false,
+  "dataset_type": "synthetic"
+}

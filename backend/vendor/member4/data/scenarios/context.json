@@ -1,0 +1,81 @@
+{
+  "S03": {
+    "inventory": [
+      {
+        "equipment_id": "bp_monitor",
+        "label": "Blood-pressure monitor",
+        "quantity": 1,
+        "usable": true,
+        "dataset_type": "synthetic"
+      },
+      {
+        "equipment_id": "thermometer",
+        "label": "Thermometer",
+        "quantity": 1,
+        "usable": true,
+        "dataset_type": "synthetic"
+      }
+    ]
+  },
+  "S04": {
+    "inventory": [
+      {
+        "equipment_id": "thermometer",
+        "label": "Thermometer",
+        "quantity": 1,
+        "usable": true,
+        "dataset_type": "synthetic"
+      },
+      {
+        "equipment_id": "bp_monitor",
+        "label": "Blood-pressure monitor",
+        "quantity": 0,
+        "usable": false,
+        "dataset_type": "synthetic"
+      }
+    ]
+  },
+  "S06": {
+    "blocked_reason": "No agreed API v1 representation for conflicting records. Do not flatten or silently pick a reading.",
+    "records": [
+      {
+        "source": "synthetic:S06_sensor",
+        "resting_hr_bpm": 70
+      },
+      {
+        "source": "synthetic:S06_manual",
+        "resting_hr_bpm": 90
+      }
+    ]
+  },
+  "S08": {
+    "inventory": [
+      {
+        "equipment_id": "thermometer",
+        "label": "Thermometer",
+        "quantity": 1,
+        "usable": true,
+        "dataset_type": "synthetic"
+      },
+      {
+        "equipment_id": "bp_monitor",
+        "label": "Blood-pressure monitor",
+        "quantity": 1,
+        "usable": false,
+        "dataset_type": "synthetic"
+      },
+      {
+        "equipment_id": "weighing_scale",
+        "label": "Weighing scale",
+        "quantity": 1,
+        "usable": true,
+        "dataset_type": "synthetic"
+      }
+    ],
+    "unusable_reason": "Fictional calibration failure; expiry is not an API v1 field."
+  },
+  "S12": {
+    "candidate_checks": [],
+    "source": "synthetic:S12"
+  }
+}

@@ -1,0 +1,299 @@
+{
+  "astronauts": [
+    {
+      "id": "Crew A",
+      "role": "Mission specialist",
+      "baseline": 70,
+      "sleepBaseline": 7.3
+    },
+    {
+      "id": "Crew B",
+      "role": "Flight engineer",
+      "baseline": 68,
+      "sleepBaseline": 7.5
+    },
+    {
+      "id": "Crew C",
+      "role": "Research specialist",
+      "baseline": 74,
+      "sleepBaseline": 7.2
+    }
+  ],
+  "history": [
+    {
+      "id": "demo-A-174",
+      "astronaut_id": "Crew A",
+      "recorded_at": "2026-01-01T08:42:00+00:00",
+      "hr": 72,
+      "sleep": 7.2,
+      "bp": null,
+      "symptoms": [],
+      "synthetic": true,
+      "provenance": "Synthetic history v1 / mission day 174; dates are fictional"
+    },
+    {
+      "id": "demo-A-175",
+      "astronaut_id": "Crew A",
+      "recorded_at": "2026-01-02T08:42:00+00:00",
+      "hr": 76,
+      "sleep": 6.8,
+      "bp": null,
+      "symptoms": [],
+      "synthetic": true,
+      "provenance": "Synthetic history v1 / mission day 175; dates are fictional"
+    },
+    {
+      "id": "demo-A-176",
+      "astronaut_id": "Crew A",
+      "recorded_at": "2026-01-03T08:42:00+00:00",
+      "hr": 74,
+      "sleep": 7,
+      "bp": null,
+      "symptoms": [],
+      "synthetic": true,
+      "provenance": "Synthetic history v1 / mission day 176; dates are fictional"
+    },
+    {
+      "id": "demo-A-177",
+      "astronaut_id": "Crew A",
+      "recorded_at": "2026-01-04T08:42:00+00:00",
+      "hr": 80,
+      "sleep": 5.9,
+      "bp": null,
+      "symptoms": [],
+      "synthetic": true,
+      "provenance": "Synthetic history v1 / mission day 177; dates are fictional"
+    },
+    {
+      "id": "demo-A-178",
+      "astronaut_id": "Crew A",
+      "recorded_at": "2026-01-05T08:42:00+00:00",
+      "hr": 78,
+      "sleep": 6.1,
+      "bp": null,
+      "symptoms": [],
+      "synthetic": true,
+      "provenance": "Synthetic history v1 / mission day 178; dates are fictional"
+    },
+    {
+      "id": "demo-A-179",
+      "astronaut_id": "Crew A",
+      "recorded_at": "2026-01-06T08:42:00+00:00",
+      "hr": 84,
+      "sleep": 5.2,
+      "bp": null,
+      "symptoms": [],
+      "synthetic": true,
+      "provenance": "Synthetic history v1 / mission day 179; dates are fictional"
+    },
+    {
+      "id": "demo-A-180",
+      "astronaut_id": "Crew A",
+      "recorded_at": "2026-01-07T08:42:00+00:00",
+      "hr": 88,
+      "sleep": 4.2,
+      "bp": null,
+      "symptoms": [
+        "Headache",
+        "Dizziness",
+        "Fatigue"
+      ],
+      "synthetic": true,
+      "provenance": "Synthetic history v1 / mission day 180; dates are fictional"
+    },
+    {
+      "id": "demo-B-174",
+      "astronaut_id": "Crew B",
+      "recorded_at": "2026-01-01T08:42:00+00:00",
+      "hr": 69,
+      "sleep": 7.4,
+      "bp": null,
+      "symptoms": [],
+      "synthetic": true,
+      "provenance": "Synthetic history v1 / mission day 174; dates are fictional"
+    },
+    {
+      "id": "demo-B-175",
+      "astronaut_id": "Crew B",
+      "recorded_at": "2026-01-02T08:42:00+00:00",
+      "hr": 71,
+      "sleep": 7.2,
+      "bp": null,
+      "symptoms": [],
+      "synthetic": true,
+      "provenance": "Synthetic history v1 / mission day 175; dates are fictional"
+    },
+    {
+      "id": "demo-B-176",
+      "astronaut_id": "Crew B",
+      "recorded_at": "2026-01-03T08:42:00+00:00",
+      "hr": 70,
+      "sleep": 7.5,
+      "bp": null,
+      "symptoms": [],
+      "synthetic": true,
+      "provenance": "Synthetic history v1 / mission day 176; dates are fictional"
+    },
+    {
+      "id": "demo-B-177",
+      "astronaut_id": "Crew B",
+      "recorded_at": "2026-01-04T08:42:00+00:00",
+      "hr": 73,
+      "sleep": 7,
+      "bp": null,
+      "symptoms": [],
+      "synthetic": true,
+      "provenance": "Synthetic history v1 / mission day 177; dates are fictional"
+    },
+    {
+      "id": "demo-B-178",
+      "astronaut_id": "Crew B",
+      "recorded_at": "2026-01-05T08:42:00+00:00",
+      "hr": 70,
+      "sleep": 7.3,
+      "bp": null,
+      "symptoms": [],
+      "synthetic": true,
+      "provenance": "Synthetic history v1 / mission day 178; dates are fictional"
+    },
+    {
+      "id": "demo-B-179",
+      "astronaut_id": "Crew B",
+      "recorded_at": "2026-01-06T08:42:00+00:00",
+      "hr": 71,
+      "sleep": 7.2,
+      "bp": null,
+      "symptoms": [],
+      "synthetic": true,
+      "provenance": "Synthetic history v1 / mission day 179; dates are fictional"
+    },
+    {
+      "id": "demo-B-180",
+      "astronaut_id": "Crew B",
+      "recorded_at": "2026-01-07T08:42:00+00:00",
+      "hr": 72,
+      "sleep": 7.1,
+      "bp": "118 / 76",
+      "symptoms": [],
+      "synthetic": true,
+      "provenance": "Synthetic history v1 / mission day 180; dates are fictional"
+    },
+    {
+      "id": "demo-C-174",
+      "astronaut_id": "Crew C",
+      "recorded_at": "2026-01-01T08:42:00+00:00",
+      "hr": 74,
+      "sleep": 7.1,
+      "bp": null,
+      "symptoms": [],
+      "synthetic": true,
+      "provenance": "Synthetic history v1 / mission day 174; dates are fictional"
+    },
+    {
+      "id": "demo-C-175",
+      "astronaut_id": "Crew C",
+      "recorded_at": "2026-01-02T08:42:00+00:00",
+      "hr": 76,
+      "sleep": 7,
+      "bp": null,
+      "symptoms": [],
+      "synthetic": true,
+      "provenance": "Synthetic history v1 / mission day 175; dates are fictional"
+    },
+    {
+      "id": "demo-C-176",
+      "astronaut_id": "Crew C",
+      "recorded_at": "2026-01-03T08:42:00+00:00",
+      "hr": 73,
+      "sleep": 6.8,
+      "bp": null,
+      "symptoms": [],
+      "synthetic": true,
+      "provenance": "Synthetic history v1 / mission day 176; dates are fictional"
+    },
+    {
+      "id": "demo-C-177",
+      "astronaut_id": "Crew C",
+      "recorded_at": "2026-01-04T08:42:00+00:00",
+      "hr": 75,
+      "sleep": 7.2,
+      "bp": null,
+      "symptoms": [],
+      "synthetic": true,
+      "provenance": "Synthetic history v1 / mission day 177; dates are fictional"
+    },
+    {
+      "id": "demo-C-178",
+      "astronaut_id": "Crew C",
+      "recorded_at": "2026-01-05T08:42:00+00:00",
+      "hr": 77,
+      "sleep": 6.9,
+      "bp": null,
+      "symptoms": [],
+      "synthetic": true,
+      "provenance": "Synthetic history v1 / mission day 178; dates are fictional"
+    },
+    {
+      "id": "demo-C-179",
+      "astronaut_id": "Crew C",
+      "recorded_at": "2026-01-06T08:42:00+00:00",
+      "hr": 76,
+      "sleep": 6.7,
+      "bp": null,
+      "symptoms": [],
+      "synthetic": true,
+      "provenance": "Synthetic history v1 / mission day 179; dates are fictional"
+    },
+    {
+      "id": "demo-C-180",
+      "astronaut_id": "Crew C",
+      "recorded_at": "2026-01-07T08:42:00+00:00",
+      "hr": null,
+      "sleep": 6.4,
+      "bp": null,
+      "symptoms": [
+        "Fatigue"
+      ],
+      "synthetic": true,
+      "provenance": "Synthetic history v1 / mission day 180; dates are fictional"
+    }
+  ],
+  "inventory": [
+    {
+      "name": "Blood-pressure monitor",
+      "category": "Monitoring",
+      "quantity": 1,
+      "available": false
+    },
+    {
+      "name": "Wrist heart-rate sensor",
+      "category": "Monitoring",
+      "quantity": 3,
+      "available": true
+    },
+    {
+      "name": "Digital thermometer",
+      "category": "Monitoring",
+      "quantity": 2,
+      "available": true
+    },
+    {
+      "name": "Crew check-in tablet",
+      "category": "Documentation",
+      "quantity": 2,
+      "available": true
+    },
+    {
+      "name": "Ultrasound unit",
+      "category": "Imaging",
+      "quantity": 1,
+      "available": false
+    },
+    {
+      "name": "Medical supply kit",
+      "category": "Supplies",
+      "quantity": 2,
+      "available": true
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "source_files_unchanged": true,
+  "vendor_files_unchanged": true,
+  "development_database_unchanged": true,
+  "development_database_sha256": "706143f9d048b2221d118b3feb00fcde96b9895e8c86d6c1276c251bb94aa518",
+  "generator_line_ending_diagnostic": [
+    {
+      "file": "scenarios\\context.json",
+      "byte_equal": false,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "file": "scenarios\\scenarios.json",
+      "byte_equal": false,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "file": "sources\\provenance.json",
+      "byte_equal": false,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "file": "synthetic\\astronauts.csv",
+      "byte_equal": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "file": "synthetic\\baselines.json",
+      "byte_equal": false,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "file": "synthetic\\health_daily.csv",
+      "byte_equal": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "file": "synthetic\\inventory.csv",
+      "byte_equal": true,
+      "equal_after_crlf_to_lf": true
+    }
+  ]
+}

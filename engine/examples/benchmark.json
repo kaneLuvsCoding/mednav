@@ -1,0 +1,280 @@
+[
+  {
+    "id": "blocked-symptoms",
+    "patch": {},
+    "expected": {
+      "selected": "symptom_review_checklist",
+      "missing": [
+        "systolic_bp_mm_hg",
+        "diastolic_bp_mm_hg"
+      ],
+      "status": "needs_review"
+    }
+  },
+  {
+    "id": "both-bp-missing",
+    "patch": {
+      "available_equipment": [
+        "bp_monitor"
+      ]
+    },
+    "expected": {
+      "selected": "measure_blood_pressure",
+      "missing": [
+        "systolic_bp_mm_hg",
+        "diastolic_bp_mm_hg"
+      ],
+      "status": "needs_review"
+    }
+  },
+  {
+    "id": "one-bp-missing",
+    "patch": {
+      "measurements": {
+        "systolic_bp_mm_hg": 110
+      },
+      "available_equipment": [
+        "bp_monitor"
+      ]
+    },
+    "expected": {
+      "selected": "symptom_review_checklist",
+      "missing": [
+        "diastolic_bp_mm_hg"
+      ],
+      "status": "needs_review"
+    },
+    "target": "measure_blood_pressure"
+  },
+  {
+    "id": "equipment-record",
+    "patch": {
+      "symptoms": [],
+      "measurements": {
+        "sleep_hours": null
+      }
+    },
+    "expected": {
+      "selected": "review_equipment_status",
+      "missing": [
+        "sleep_hours",
+        "systolic_bp_mm_hg",
+        "diastolic_bp_mm_hg"
+      ],
+      "status": "needs_review"
+    }
+  },
+  {
+    "id": "routine",
+    "patch": {
+      "symptoms": [],
+      "measurements": {
+        "systolic_bp_mm_hg": 110,
+        "diastolic_bp_mm_hg": 70,
+        "sleep_hours": 7.3,
+        "resting_hr_bpm": 70
+      }
+    },
+    "expected": {
+      "selected": "review_sleep_workload",
+      "missing": [],
+      "status": "needs_review",
+      "routine": true
+    }
+  },
+  {
+    "id": "sleep-change",
+    "patch": {
+      "symptoms": [],
+      "measurements": {
+        "systolic_bp_mm_hg": 110,
+        "diastolic_bp_mm_hg": 70
+      }
+    },
+    "expected": {
+      "selected": "review_sleep_workload",
+      "missing": [],
+      "status": "needs_review"
+    }
+  },
+  {
+    "id": "inverted-pair",
+    "patch": {
+      "measurements": {
+        "systolic_bp_mm_hg": 80,
+        "diastolic_bp_mm_hg": 110
+      }
+    },
+    "expected": {
+      "selected": "contact_medical_officer",
+      "missing": [],
+      "status": "needs_review"
+    }
+  },
+  {
+    "id": "stale-sleep",
+    "patch": {},
+    "expected": {
+      "selected": "contact_medical_officer",
+      "missing": [
+        "systolic_bp_mm_hg",
+        "diastolic_bp_mm_hg"
+      ],
+      "status": "needs_review"
+    },
+    "evidence": {
+      "sleep_hours": {
+        "valid_until": "2026-11-13T00:00:00Z"
+      }
+    }
+  },
+  {
+    "id": "expired-monitor",
+    "patch": {
+      "available_equipment": [
+        "bp_monitor"
+      ]
+    },
+    "expected": {
+      "selected": "symptom_review_checklist",
+      "missing": [
+        "systolic_bp_mm_hg",
+        "diastolic_bp_mm_hg"
+      ],
+      "status": "needs_review"
+    },
+    "inventory": [
+      {
+        "equipment_id": "bp_monitor",
+        "quantity": 1,
+        "usable": true,
+        "expires_on": "2026-11-13"
+      }
+    ],
+    "forbidden": [
+      "bp_monitor"
+    ],
+    "target": "measure_blood_pressure"
+  },
+  {
+    "id": "empty-stock",
+    "patch": {
+      "available_equipment": [
+        "bp_monitor"
+      ]
+    },
+    "expected": {
+      "selected": null,
+      "missing": [
+        "systolic_bp_mm_hg",
+        "diastolic_bp_mm_hg"
+      ],
+      "status": "insufficient_evidence"
+    },
+    "inventory": [
+      {
+        "equipment_id": "bp_monitor",
+        "quantity": 0,
+        "usable": true
+      }
+    ],
+    "candidates": [
+      "measure_blood_pressure"
+    ],
+    "forbidden": [
+      "bp_monitor"
+    ]
+  },
+  {
+    "id": "no-candidates",
+    "patch": {},
+    "expected": {
+      "selected": null,
+      "missing": [
+        "systolic_bp_mm_hg",
+        "diastolic_bp_mm_hg"
+      ],
+      "status": "insufficient_evidence"
+    },
+    "candidates": []
+  },
+  {
+    "id": "emergency-with-monitor",
+    "patch": {
+      "emergency_override": true,
+      "available_equipment": [
+        "bp_monitor"
+      ]
+    },
+    "expected": {
+      "selected": null,
+      "missing": [
+        "systolic_bp_mm_hg",
+        "diastolic_bp_mm_hg"
+      ],
+      "status": "escalate"
+    }
+  },
+  {
+    "id": "emergency-without-monitor",
+    "patch": {
+      "emergency_override": true
+    },
+    "expected": {
+      "selected": null,
+      "missing": [
+        "systolic_bp_mm_hg",
+        "diastolic_bp_mm_hg"
+      ],
+      "status": "escalate"
+    }
+  },
+  {
+    "id": "online",
+    "patch": {
+      "communication_status": "online"
+    },
+    "expected": {
+      "selected": "symptom_review_checklist",
+      "missing": [
+        "systolic_bp_mm_hg",
+        "diastolic_bp_mm_hg"
+      ],
+      "status": "needs_review"
+    }
+  },
+  {
+    "id": "source-conflict",
+    "patch": {},
+    "expected": {
+      "selected": "contact_medical_officer",
+      "missing": [
+        "systolic_bp_mm_hg",
+        "diastolic_bp_mm_hg"
+      ],
+      "status": "needs_review"
+    },
+    "evidence": {
+      "resting_hr_bpm": {
+        "conflicting": true
+      }
+    }
+  },
+  {
+    "id": "verified-source",
+    "patch": {},
+    "expected": {
+      "selected": "symptom_review_checklist",
+      "missing": [
+        "systolic_bp_mm_hg",
+        "diastolic_bp_mm_hg"
+      ],
+      "status": "needs_review"
+    },
+    "evidence": {
+      "sleep_hours": {
+        "source_verified": true
+      }
+    }
+  }
+]

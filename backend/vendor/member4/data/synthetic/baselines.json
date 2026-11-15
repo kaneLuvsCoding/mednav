@@ -1,0 +1,22 @@
+{
+  "A01": {
+    "resting_hr_bpm": 68.0,
+    "sleep_hours": 7.41,
+    "dataset_type": "synthetic"
+  },
+  "A02": {
+    "resting_hr_bpm": 70.0,
+    "sleep_hours": 7.37,
+    "dataset_type": "synthetic"
+  },
+  "A03": {
+    "resting_hr_bpm": 72.0,
+    "sleep_hours": 7.33,
+    "dataset_type": "synthetic"
+  },
+  "A04": {
+    "resting_hr_bpm": 74.0,
+    "sleep_hours": 7.29,
+    "dataset_type": "synthetic"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "total": 32,
+  "passed": 11,
+  "failed_or_error": 1,
+  "skipped": 20
+}
+test_invalid_type_returns_actionable_error (test_member4.ApiTests.test_invalid_type_returns_actionable_error) ... skipped 'MEDNAV_API_URL not configured: local backend absent'
+test_inventory_sanitization (test_member4.ApiTests.test_inventory_sanitization) ... skipped 'MEDNAV_INVENTORY_API_EVALUATOR not configured: real component absent'
+test_valid_scenarios (test_member4.ApiTests.test_valid_scenarios) ... skipped 'MEDNAV_API_URL not configured: local backend absent'
+test_S01 (test_member4.EngineTests.test_S01) ... skipped 'MEDNAV_EVALUATOR not configured: real component absent'
+test_S02 (test_member4.EngineTests.test_S02) ... skipped 'MEDNAV_EVALUATOR not configured: real component absent'
+test_S03 (test_member4.EngineTests.test_S03) ... skipped 'MEDNAV_EVALUATOR not configured: real component absent'
+test_S04 (test_member4.EngineTests.test_S04) ... skipped 'MEDNAV_EVALUATOR not configured: real component absent'
+test_S05 (test_member4.EngineTests.test_S05) ... skipped 'MEDNAV_EVALUATOR not configured: real component absent'
+test_S07 (test_member4.EngineTests.test_S07) ... skipped 'MEDNAV_EVALUATOR not configured: real component absent'
+test_S08 (test_member4.EngineTests.test_S08) ... skipped 'MEDNAV_EVALUATOR not configured: real component absent'
+test_S09 (test_member4.EngineTests.test_S09) ... skipped 'MEDNAV_EVALUATOR not configured: real component absent'
+test_S10 (test_member4.EngineTests.test_S10) ... skipped 'MEDNAV_EVALUATOR not configured: real component absent'
+test_S11 (test_member4.EngineTests.test_S11) ... skipped 'MEDNAV_EVALUATOR not configured: real component absent'
+test_S14 (test_member4.EngineTests.test_S14) ... skipped 'MEDNAV_EVALUATOR not configured: real component absent'
+test_S15 (test_member4.EngineTests.test_S15) ... skipped 'MEDNAV_EVALUATOR not configured: real component absent'
+test_S16 (test_member4.EngineTests.test_S16) ... skipped 'MEDNAV_EVALUATOR not configured: real component absent'
+test_conflicting_records (test_member4.EngineTests.test_conflicting_records) ... skipped 'API v1 conflict representation and expected response not agreed; see handoff'
+test_determinism_and_input_immutability (test_member4.EngineTests.test_determinism_and_input_immutability) ... skipped 'MEDNAV_EVALUATOR not configured: real component absent'
+test_empty_catalog (test_member4.EngineTests.test_empty_catalog) ... skipped 'MEDNAV_CONTEXT_EVALUATOR not configured: real component absent'
+test_offline_engine_import_and_execution (test_member4.EngineTests.test_offline_engine_import_and_execution) ... skipped 'MEDNAV_EVALUATOR not configured: real component absent'
+test_four_fictional_profiles (test_member4.SeedTests.test_four_fictional_profiles) ... ok
+test_generator_byte_reproducibility (test_member4.SeedTests.test_generator_byte_reproducibility) ... FAIL
+test_intentionally_invalid_fixture (test_member4.SeedTests.test_intentionally_invalid_fixture) ... ok
+test_inventory_context_matches_requests (test_member4.SeedTests.test_inventory_context_matches_requests) ... ok
+test_inventory_types_and_default_availability (test_member4.SeedTests.test_inventory_types_and_default_availability) ... ok
+test_offline_guard_rejects_network_attempt (test_member4.SeedTests.test_offline_guard_rejects_network_attempt) ... ok
+test_oracle_catches_unsafe_responses (test_member4.SeedTests.test_oracle_catches_unsafe_responses) ... ok
+test_outage_is_unknown_not_zero (test_member4.SeedTests.test_outage_is_unknown_not_zero) ... ok
+test_scenario_coverage_and_null_expectations (test_member4.SeedTests.test_scenario_coverage_and_null_expectations) ... ok
+test_synthetic_labels (test_member4.SeedTests.test_synthetic_labels) ... ok
+test_thirty_unique_days_each (test_member4.SeedTests.test_thirty_unique_days_each) ... ok
+test_valid_request_shapes (test_member4.SeedTests.test_valid_request_shapes) ... ok
+
+======================================================================
+FAIL: test_generator_byte_reproducibility (test_member4.SeedTests.test_generator_byte_reproducibility)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ZL_sht_H\AppData\Local\Temp\mednav-member4-xtij37dp\package\tests\member4\test_member4.py", line 137, in test_generator_byte_reproducibility
+    self.assertEqual(p.read_bytes(),(ROOT/'data'/p.relative_to(temp)).read_bytes(),str(p))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: b'{\r\n  "S03": {\r\n    "inventory": [\r\n  [2055 chars]\r\n' != b'{\n  "S03": {\n    "inventory": [\n      {\[1893 chars]n}\n' : C:\Users\ZL_sht_H\AppData\Local\Temp\tmph0o7a447\scenarios\context.json
+
+----------------------------------------------------------------------
+Ran 32 tests in 0.109s
+
+FAILED (failures=1, skipped=20)

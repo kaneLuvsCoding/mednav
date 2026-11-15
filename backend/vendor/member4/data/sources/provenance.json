@@ -1,0 +1,24 @@
+{
+  "version": "member4-seed-v1",
+  "dataset_type": "synthetic",
+  "generator": "data/generate_seed.py",
+  "randomness": "none; fixed arithmetic sequences",
+  "records": 120,
+  "people": 4,
+  "days_per_person": 30,
+  "date_range": [
+    "2026-10-16",
+    "2026-11-14"
+  ],
+  "source": "synthetic:member4-seed-v1",
+  "clinical_model": false,
+  "real_person_data": false,
+  "notes": [
+    "All people, inventory, measurements and scenarios are fictional.",
+    "Research references motivate scope only; no measurements or thresholds were derived from NASA.",
+    "Scenario measurements and supplied baselines are independent fixtures, not joins to historical CSV.",
+    "CSV numeric empty cells mean unknown; convert to JSON null, never zero.",
+    "CSV reported_symptoms is a JSON array; usable is lowercase true/false.",
+    "Baselines are first seven daily records, arithmetic mean; not clinical normal ranges."
+  ]
+}

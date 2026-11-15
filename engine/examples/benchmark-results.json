@@ -1,0 +1,381 @@
+{
+  "dataset_type": "synthetic",
+  "cases": [
+    {
+      "id": "blocked-symptoms",
+      "selected": "symptom_review_checklist",
+      "expected_selected": "symptom_review_checklist",
+      "exact": true,
+      "missing_hits": 2,
+      "missing_total": 2,
+      "feasible": true,
+      "replay": true,
+      "emergency": false,
+      "override_ok": false,
+      "routine": false,
+      "officer": true,
+      "target": "symptom_review_checklist",
+      "paths": {
+        "fixed_order": [
+          "symptom_review_checklist"
+        ],
+        "mednav": [
+          "symptom_review_checklist"
+        ]
+      }
+    },
+    {
+      "id": "both-bp-missing",
+      "selected": "measure_blood_pressure",
+      "expected_selected": "measure_blood_pressure",
+      "exact": true,
+      "missing_hits": 2,
+      "missing_total": 2,
+      "feasible": true,
+      "replay": true,
+      "emergency": false,
+      "override_ok": false,
+      "routine": false,
+      "officer": true,
+      "target": "measure_blood_pressure",
+      "paths": {
+        "fixed_order": [
+          "symptom_review_checklist",
+          "review_sleep_workload",
+          "measure_blood_pressure"
+        ],
+        "mednav": [
+          "measure_blood_pressure"
+        ]
+      }
+    },
+    {
+      "id": "one-bp-missing",
+      "selected": "symptom_review_checklist",
+      "expected_selected": "symptom_review_checklist",
+      "exact": true,
+      "missing_hits": 1,
+      "missing_total": 1,
+      "feasible": true,
+      "replay": true,
+      "emergency": false,
+      "override_ok": false,
+      "routine": false,
+      "officer": true,
+      "target": "measure_blood_pressure",
+      "paths": {
+        "fixed_order": [
+          "symptom_review_checklist",
+          "review_sleep_workload",
+          "measure_blood_pressure"
+        ],
+        "mednav": [
+          "symptom_review_checklist",
+          "measure_blood_pressure"
+        ]
+      }
+    },
+    {
+      "id": "equipment-record",
+      "selected": "review_equipment_status",
+      "expected_selected": "review_equipment_status",
+      "exact": true,
+      "missing_hits": 3,
+      "missing_total": 3,
+      "feasible": true,
+      "replay": true,
+      "emergency": false,
+      "override_ok": false,
+      "routine": false,
+      "officer": true,
+      "target": "review_equipment_status",
+      "paths": {
+        "fixed_order": [
+          "review_equipment_status"
+        ],
+        "mednav": [
+          "review_equipment_status"
+        ]
+      }
+    },
+    {
+      "id": "routine",
+      "selected": "review_sleep_workload",
+      "expected_selected": "review_sleep_workload",
+      "exact": true,
+      "missing_hits": 0,
+      "missing_total": 0,
+      "feasible": true,
+      "replay": true,
+      "emergency": false,
+      "override_ok": false,
+      "routine": true,
+      "officer": false,
+      "target": "review_sleep_workload",
+      "paths": {
+        "fixed_order": [
+          "review_sleep_workload"
+        ],
+        "mednav": [
+          "review_sleep_workload"
+        ]
+      }
+    },
+    {
+      "id": "sleep-change",
+      "selected": "review_sleep_workload",
+      "expected_selected": "review_sleep_workload",
+      "exact": true,
+      "missing_hits": 0,
+      "missing_total": 0,
+      "feasible": true,
+      "replay": true,
+      "emergency": false,
+      "override_ok": false,
+      "routine": false,
+      "officer": false,
+      "target": "review_sleep_workload",
+      "paths": {
+        "fixed_order": [
+          "review_sleep_workload"
+        ],
+        "mednav": [
+          "review_sleep_workload"
+        ]
+      }
+    },
+    {
+      "id": "inverted-pair",
+      "selected": "contact_medical_officer",
+      "expected_selected": "contact_medical_officer",
+      "exact": true,
+      "missing_hits": 0,
+      "missing_total": 0,
+      "feasible": true,
+      "replay": true,
+      "emergency": false,
+      "override_ok": false,
+      "routine": false,
+      "officer": true,
+      "target": "contact_medical_officer",
+      "paths": {
+        "fixed_order": [
+          "symptom_review_checklist",
+          "review_sleep_workload",
+          "review_equipment_status",
+          "contact_medical_officer"
+        ],
+        "mednav": [
+          "contact_medical_officer"
+        ]
+      }
+    },
+    {
+      "id": "stale-sleep",
+      "selected": "contact_medical_officer",
+      "expected_selected": "contact_medical_officer",
+      "exact": true,
+      "missing_hits": 2,
+      "missing_total": 2,
+      "feasible": true,
+      "replay": true,
+      "emergency": false,
+      "override_ok": false,
+      "routine": false,
+      "officer": true,
+      "target": "contact_medical_officer",
+      "paths": {
+        "fixed_order": [
+          "symptom_review_checklist",
+          "review_equipment_status",
+          "contact_medical_officer"
+        ],
+        "mednav": [
+          "contact_medical_officer"
+        ]
+      }
+    },
+    {
+      "id": "expired-monitor",
+      "selected": "symptom_review_checklist",
+      "expected_selected": "symptom_review_checklist",
+      "exact": true,
+      "missing_hits": 2,
+      "missing_total": 2,
+      "feasible": true,
+      "replay": true,
+      "emergency": false,
+      "override_ok": false,
+      "routine": false,
+      "officer": true,
+      "target": "measure_blood_pressure",
+      "paths": {
+        "fixed_order": [
+          "symptom_review_checklist",
+          "review_sleep_workload",
+          "review_equipment_status"
+        ],
+        "mednav": [
+          "symptom_review_checklist",
+          "review_sleep_workload",
+          "review_equipment_status"
+        ]
+      }
+    },
+    {
+      "id": "empty-stock",
+      "selected": null,
+      "expected_selected": null,
+      "exact": true,
+      "missing_hits": 2,
+      "missing_total": 2,
+      "feasible": true,
+      "replay": true,
+      "emergency": false,
+      "override_ok": false,
+      "routine": false,
+      "officer": true,
+      "target": null,
+      "paths": {}
+    },
+    {
+      "id": "no-candidates",
+      "selected": null,
+      "expected_selected": null,
+      "exact": true,
+      "missing_hits": 2,
+      "missing_total": 2,
+      "feasible": true,
+      "replay": true,
+      "emergency": false,
+      "override_ok": false,
+      "routine": false,
+      "officer": true,
+      "target": null,
+      "paths": {}
+    },
+    {
+      "id": "emergency-with-monitor",
+      "selected": null,
+      "expected_selected": null,
+      "exact": true,
+      "missing_hits": 2,
+      "missing_total": 2,
+      "feasible": true,
+      "replay": true,
+      "emergency": true,
+      "override_ok": true,
+      "routine": false,
+      "officer": true,
+      "target": null,
+      "paths": {}
+    },
+    {
+      "id": "emergency-without-monitor",
+      "selected": null,
+      "expected_selected": null,
+      "exact": true,
+      "missing_hits": 2,
+      "missing_total": 2,
+      "feasible": true,
+      "replay": true,
+      "emergency": true,
+      "override_ok": true,
+      "routine": false,
+      "officer": true,
+      "target": null,
+      "paths": {}
+    },
+    {
+      "id": "online",
+      "selected": "symptom_review_checklist",
+      "expected_selected": "symptom_review_checklist",
+      "exact": true,
+      "missing_hits": 2,
+      "missing_total": 2,
+      "feasible": true,
+      "replay": true,
+      "emergency": false,
+      "override_ok": false,
+      "routine": false,
+      "officer": true,
+      "target": "symptom_review_checklist",
+      "paths": {
+        "fixed_order": [
+          "symptom_review_checklist"
+        ],
+        "mednav": [
+          "symptom_review_checklist"
+        ]
+      }
+    },
+    {
+      "id": "source-conflict",
+      "selected": "contact_medical_officer",
+      "expected_selected": "contact_medical_officer",
+      "exact": true,
+      "missing_hits": 2,
+      "missing_total": 2,
+      "feasible": true,
+      "replay": true,
+      "emergency": false,
+      "override_ok": false,
+      "routine": false,
+      "officer": true,
+      "target": "contact_medical_officer",
+      "paths": {
+        "fixed_order": [
+          "symptom_review_checklist",
+          "review_sleep_workload",
+          "review_equipment_status",
+          "contact_medical_officer"
+        ],
+        "mednav": [
+          "contact_medical_officer"
+        ]
+      }
+    },
+    {
+      "id": "verified-source",
+      "selected": "symptom_review_checklist",
+      "expected_selected": "symptom_review_checklist",
+      "exact": true,
+      "missing_hits": 2,
+      "missing_total": 2,
+      "feasible": true,
+      "replay": true,
+      "emergency": false,
+      "override_ok": false,
+      "routine": false,
+      "officer": true,
+      "target": "symptom_review_checklist",
+      "paths": {
+        "fixed_order": [
+          "symptom_review_checklist"
+        ],
+        "mednav": [
+          "symptom_review_checklist"
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "cases": 16,
+    "exact": 16,
+    "repeatable": 16,
+    "selected": 12,
+    "infeasible": 0,
+    "missing_found": 26,
+    "missing_total": 26,
+    "override_correct": 2,
+    "overrides": 2,
+    "routine_handoffs": 0,
+    "routine_cases": 1,
+    "reachable": 11,
+    "targeted": 12,
+    "form_openings_on_reachable": {
+      "fixed_order": 23,
+      "mednav": 12
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "database": "C:\\Users\\ZL_sht_H\\AppData\\Local\\Temp\\mednav-member4-99omc0a5\\isolated-qa.db",
+  "dataset_type": "synthetic",
+  "astronauts": 4,
+  "health_records": 120,
+  "inventory_items": 4,
+  "baselines": 4,
+  "unknown_numeric_cells": 2,
+  "available_equipment": [
+    "thermometer",
+    "weighing_scale"
+  ],
+  "database_sha256": "e14ddec9c39dc4fcb2795dc57be906d29b13b01a531cb965348a90474cab74d9"
+}
